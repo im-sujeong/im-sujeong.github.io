@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>임수정 I’m Sujeong</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6df61abf-ef8b-4d68-ad40-9ea8af21ee19" class="page sans"><header><h1 class="page-title">임수정 I’m Sujeong</h1></header><div class="page-body"><div id="91a5b098-c18f-46aa-a547-3a46c482b27a" class="column-list"><div id="72b2c052-5338-4318-84fd-d8ffaa667c89" style="width:25%" class="column"><figure id="f3bb7d1b-f0f7-40f1-ab74-cdc693127c34" class="image"><a href="./images/profile.png"><img style="width:500px" src="./images/profile.png"/></a></figure></div><div id="15896ecf-e8f0-470a-a37e-eb0d60962cd8" style="width:75%" class="column"><h3 id="9fa2a1ab-4f59-4b60-a00b-64ef623919c6" class="">“항상 즐겁게 웃으며”
+개발하고, 일하고, 살아가는
+<mark class="highlight-yellow_background">안드로이드 개발자</mark> 임수정입니다 :^)</h3><p id="42da676d-0b3e-40e4-aaac-ec0233a84a16" class="">
+</p><p id="0a7f3b7a-70a3-497a-a532-b5f796905c66" class="">📧 Email.  <strong>tnwjd8116@gmail.com</strong></p><p id="ec97b300-2ddf-420f-a548-611c4c662242" class="">🛠 GitHub.  <strong><a href="https://github.com/im-sujeong">https://github.com/im-sujeong</a></strong></p></div></div><p id="3d2f3524-352a-4f22-8467-888315927a44" class="">
+</p><h3 id="ccf6d1e6-a68a-46dd-a408-65ba7ec31c78" class="">🛠<mark class="highlight-blue"><strong> 기술 스택</strong></mark></h3><hr id="6be27623-95f7-4213-aae1-18de9a4c15cd"/><div id="d8087863-9ec8-45ef-82da-70394bc742c1" class="column-list"><div id="d00bcae7-971d-4b19-a941-57b584b9cbae" style="width:50%" class="column"><h3 id="5e6c05cb-7c82-4c00-9211-e7b39b2a1bec" class="">Skill</h3><ul id="eb1cc067-d0fe-4f07-a95d-1eb828699a08" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>Java</strong></mark></li></ul><ul id="e920ea98-1f87-4f77-b77a-f8d431742709" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>Kotlin</strong></mark></li></ul><ul id="ba24508a-db41-4dd4-9350-24ac213d9054" class="bulleted-list"><li style="list-style-type:disc">koin</li></ul><ul id="872a793c-99e1-4926-a656-0e641f2c3ebf" class="bulleted-list"><li style="list-style-type:disc">Coroutine</li></ul><ul id="01228d30-327e-4cf0-b305-731e6f5c354b" class="bulleted-list"><li style="list-style-type:disc">Jetpack(Room, Navigation, LiveData ...)</li></ul><ul id="f9845fb3-b00e-4c46-aed8-c0bae80d48f9" class="bulleted-list"><li style="list-style-type:disc">MVVM</li></ul><ul id="2adcd47f-99b3-45b9-bf5c-6da9e6f8194b" class="bulleted-list"><li style="list-style-type:disc">Clean Architecture</li></ul></div><div id="52a24087-57b8-45e2-bcb6-cb3d36f32cfa" style="width:50%" class="column"><h3 id="519b4f82-f63c-4d94-9b12-3e82cf583a00" class="">Tool</h3><ul id="d7e0a30f-dec5-478e-9f81-8da831dcdbcb" class="bulleted-list"><li style="list-style-type:disc">Git</li></ul><ul id="ffc17267-04d3-48ee-a165-0bad36a17718" class="bulleted-list"><li style="list-style-type:disc">Github</li></ul><ul id="6c05fbac-6b5c-4420-89dc-4cc513ccd32a" class="bulleted-list"><li style="list-style-type:disc">Jira</li></ul><ul id="24ccaf64-9b70-4af2-a246-b44d19c0b93a" class="bulleted-list"><li style="list-style-type:disc">Confluence</li></ul><ul id="a3a35e7f-386d-4a75-83ff-fcdfb06165a6" class="bulleted-list"><li style="list-style-type:disc">Figma</li></ul><ul id="322f0f62-77a1-42f7-bd94-2e2cad53500c" class="bulleted-list"><li style="list-style-type:disc">Zeplin</li></ul></div></div><p id="2908361f-f7d6-435b-a4a0-66620548b42c" class="">
+</p><h3 id="6f4cd12d-b67b-42fd-a4aa-0eee4d67c26f" class=""><mark class="highlight-blue"><strong>👩‍💻 </strong></mark><mark class="highlight-blue">개발 경력</mark></h3><hr id="24d88196-425b-423c-a580-bddc6b58d0cd"/><h3 id="56d0775b-ba0e-438e-97dd-403f36f7654c" class="">와이씨소프트 </h3><p id="ff2314d8-919e-47e6-98de-39989376b987" class="">안드로이드 개발</p><p id="c2c5b977-e909-4ace-82f2-d3ff99b7a576" class=""><mark class="highlight-gray">2020. 07 ~ 2021. 11</mark></p><ul id="652dce44-24de-4d96-a7fe-a4de2ac40102" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>올잡 | 일용직 구인/구직 서비스 </strong></mark><mark class="highlight-yellow_background"><strong><a href="https://play.google.com/store/apps/details?id=com.ycsoft.alljob">👉</a></strong></mark><p id="14a6bbeb-0dff-472c-b342-1640d19d4d57" class="block-color-gray_background"> - <strong>안드로이드 개발 90% (java)</strong></p><p id="152636dd-8668-486b-a8c3-a5ae30834d9d" class="block-color-gray_background"> <strong>- 네이버 지도 API</strong></p><p id="da74412d-434a-4fd8-b2a0-07e26863b73a" class="block-color-gray_background"> <strong>- FCM, Dynamic Link</strong></p><p id="e42baa15-c0f4-4cc6-b3af-8fdeb4eda00c" class="block-color-gray_background"> <strong>- Glide, Retrofit</strong></p><p id="3c6c3154-aef4-4aa0-9cec-c9cab9380736" class="block-color-gray_background"> <strong>- Simple Request Photo </strong><a href="https://github.com/im-sujeong/SimpleRequestPhoto"><mark class="highlight-red"><strong>(made by me!)</strong></mark></a></p></li></ul><p id="96eff4b4-1a94-46e2-92c4-12f2441d1d44" class="">
+</p><h3 id="1ba1dc7f-88e2-4c59-bb3f-99b683d266e9" class="">글로벌 에어포트 네트워크 코퍼레이션 (GANCO)</h3><p id="be6c6e0a-aeb6-4871-a956-e8484118d8c6" class="">안드로이드 개발</p><p id="1615c295-b2af-46b2-8a0f-7027baf04ddb" class=""><mark class="highlight-gray">2019. 06 ~ 2019. 12</mark></p><ul id="7a70fb49-3523-4fb6-a3d3-ecb6022bbfb7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>CRL - Brussels Charleroi Airport Official | 항공권 / 여행 일정 관리 서비스</strong></mark><p id="3aef649e-8e30-4cfc-b037-547367fbc15a" class="block-color-gray_background"> - <strong>안드로이드 개발 90% (java)</strong></p><p id="25626a5c-ef7f-4817-93cd-1abf84db4c9d" class="block-color-gray_background"> <strong>- FCM, Dynamic Link, Google Analytics</strong></p><p id="cb19ea3f-c948-446d-9575-d668314eba8b" class="block-color-gray_background"> <strong>- Glide, Retrofit, Lottie, MPAndroidChart</strong></p></li></ul><p id="f809b963-7300-4d96-ac20-75ac00cedb55" class="">
+</p><h3 id="7d58e981-b240-441e-849a-dae08104145c" class="">온도랩</h3><p id="878055ce-edbb-4093-8e5f-5a2127c495e7" class="">안드로이드 개발</p><p id="5acc4374-abd7-4054-bed0-f728e2e50d66" class=""><mark class="highlight-gray">2017. 12 ~ 2019. 04</mark></p><ul id="29dca688-e3b5-4293-ade8-17382b8412e8" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>Hello Mood | 한 줄 일기</strong></mark><p id="ad291242-b6d5-4507-9a32-433a1fd5bdcd" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="41b7239f-0be6-413e-9a28-96693eb6bad3" class="block-color-gray_background"> <strong>- SQLite</strong></p><p id="8d05985f-3e5b-41db-9a63-7199f9ea7e45" class="block-color-gray_background"> <strong>- Lottie</strong></p><p id="72b7b714-9e60-450a-8251-07b8be95c4f1" class="block-color-gray_background"> <strong>- Admob</strong></p><p id="f03dcea2-d908-4833-bb6e-9e5f9550b00b" class="">
+</p></li></ul><ul id="219422f1-a541-4af2-bd74-30d105b16c39" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>ATOZ | 포인트 쇼핑 어플</strong></mark><p id="d850bc3f-15b3-4a04-a52b-53e450e6ac26" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="00940420-1ac9-46c1-a0b8-31112feaeabb" class="block-color-gray_background"> <strong>-  FCM</strong></p><p id="159eb3cf-7855-4887-bd0e-b3d16b9455d9" class="block-color-gray_background"> <strong>- Glide, Retrofit, Piccaso, Zxing(QR)</strong></p></li></ul><p id="d16baf79-4bec-436f-8beb-27dd4c71ec4f" class="">
+</p><ul id="ed903670-e131-4f37-ac64-b6467fd80902" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>인공지능 아키라 | 채팅형 심리테스트 어플</strong></mark><p id="4b50c482-0216-4398-83e8-0226f62e9660" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="efe9cb8d-e161-4824-89ad-cc5a44c63250" class="block-color-gray_background"> <strong>- Facebook 로그인, Kakao 로그인</strong></p><p id="01b1435d-0687-4c19-9c3c-c0bf4a321044" class="block-color-gray_background"> <strong>- FCM</strong></p><p id="e58a0bdd-5ddc-4376-9a9e-403b71e9e0a5" class="block-color-gray_background"> <strong>- Glide, Retrofit, Lottie</strong></p></li></ul><p id="aa118135-7c75-4c2f-b025-ba7284430a93" class="">
+</p><ul id="ec3db0a1-f62c-4b04-b52d-caa220740144" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>300 : 볼링의 부활 | 볼링 점수 관리 서비스</strong></mark><p id="ac72bd74-ff00-4690-a979-00db6f82baaa" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="f57aa80a-1076-43e2-878c-e75a9624ec59" class="block-color-gray_background"> <strong>- Facebook 로그인</strong></p><p id="8b6a51c8-e15a-4cb6-8923-fc2d3dbe7e1d" class="block-color-gray_background"> <strong>- FCM, 구글 인앱 결제</strong></p><p id="ae0b1d13-fcda-49e0-9100-6c0ee24fae79" class="block-color-gray_background"> <strong>- Glide, Retrofit, Lottie, MPAndroidChart</strong></p><p id="91818eb1-f327-4330-ab02-fa061c470feb" class="block-color-gray_background"> <strong>- SQLite</strong></p><p id="575635f8-227c-4256-9a57-c75d78f0418d" class="block-color-gray_background"> <strong>- Admob</strong></p></li></ul><p id="dc7ce1d5-e775-4edb-9670-a0428aefaffc" class="">
+</p><ul id="56ead96a-1651-4535-a6d9-ede6373016e4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>품앗이 주차 | 사설 주차장 공유 서비스</strong></mark><p id="23700fca-087a-4048-b9fd-2e4c7d9e12ec" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="6592ef31-62d2-4273-b8b7-c2748a94fe84" class="block-color-gray_background"> <strong>- FCM, Google Map</strong></p><p id="57ab1782-9760-4134-a99d-247fdc2ab6ee" class="block-color-gray_background"> <strong>- Glide</strong></p></li></ul><p id="e78b4fbd-9f8b-4109-adc3-69a6aee20406" class="">
+</p><h3 id="08ac2122-8d9a-4ff9-b865-d07cc081dd59" class="">가나소프트</h3><p id="c71dba47-651e-4198-ac25-2a93d07c9b7c" class="">안드로이드 개발</p><p id="3d864bdb-f2f4-4566-9b7b-5d326d52e094" class=""><mark class="highlight-gray">2016. 12 ~ 2017. 10</mark></p><ul id="f30715f6-b7e5-491f-b0ce-44fae865a968" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>릴리커버 | 기기를 이용한 피부 관리 및 화장품 정보 제공 서비스</strong></mark><p id="824cc9ba-ff11-454a-af1b-98bdd55f92aa" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="338cdeb0-0834-411e-8c51-db9da701c4f3" class="block-color-gray_background"> <strong>- 와이파이 다이렉트</strong></p><p id="f4182851-c607-4f67-9269-ac5e4dc08fc2" class="">
+</p></li></ul><ul id="3270cfc3-5775-4900-ba03-5c3d02ec5a4a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>연필 | 커플 다이어리</strong></mark><p id="bbb81492-d554-4abe-a1f1-4da28d9f02fa" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p></li></ul><p id="69b28578-e0f0-4ae2-bcea-c4464f653695" class="">
+</p><ul id="47930f0d-537e-4f2a-bad5-7d48bb84920a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>MBC America | MBC America 뉴스 / 커뮤니티 / 편성표 제공 서비스</strong></mark><p id="1fe91af0-e905-434d-be46-0bbd58f6c783" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p><p id="916fc7b3-bff2-4d4f-996f-e911ef3c4535" class="block-color-gray_background"> <strong>- JW 플레이어, 유튜브 플레이어 연동</strong></p></li></ul><p id="054e59aa-9219-4fba-8a34-d89f5a66809e" class="">
+</p><ul id="dcf07686-fefc-438f-a2e0-adfeb7d19825" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background"><strong>충성대 | 육군 3사관 안내 어플</strong></mark><p id="055c882d-f557-407e-85e6-dc592faae067" class="block-color-gray_background"> - <strong>안드로이드 개발 100% (java)</strong></p></li></ul><p id="c06931c1-f916-478f-aa65-42f613f62130" class="">
+</p><h3 id="bc8f890c-d9d9-4761-85af-809fb95b2c9a" class="">군월드</h3><p id="0659520b-4224-49d5-87f0-bb556f4684e2" class="">안드로이드 개발, 기획, DB 설계(MySQL), API 설계 및 API 개발(PHP 사용)</p><p id="2b952fe9-0ea5-4f72-b1ca-40a623315b00" class=""><mark class="highlight-gray">2013. 11 ~ 2016. 06</mark></p><ul id="a3151286-83a5-42ba-83e4-c8aa69a00d7b" class="bulleted-list"><li style="list-style-type:disc"><strong>구두의 정석 | </strong>프로필 매칭을 통한 소개팅 어플</li></ul><ul id="2d85fb50-a417-4c43-8b79-be63acd39bdf" class="bulleted-list"><li style="list-style-type:disc"><strong>카카오디 |</strong> 친구와 현재 위치 공유 어플</li></ul><ul id="5ebd007e-ed28-4344-af9e-7979540611e4" class="bulleted-list"><li style="list-style-type:disc"><strong>아트맵 |</strong> 미술전시회 소개 및 사용자 맞춤형 정보 제공 서비스</li></ul><ul id="2c65313b-4887-4d95-bc77-5b934ca54a5d" class="bulleted-list"><li style="list-style-type:disc"><strong>제로 |</strong> 위치 기반 실시간 스포츠 모임 서비스</li></ul><ul id="8c452b0a-35e6-4c3f-a757-159b19cd0021" class="bulleted-list"><li style="list-style-type:disc"><strong>아트쏭 |</strong> 동요 반주에 맞춘 노래 녹음 어플</li></ul><ul id="7967084b-5669-4c80-a551-fe823d8f12e5" class="bulleted-list"><li style="list-style-type:disc"><strong>라이프업 </strong>| 남녀소통 전문가 웹툰&amp;웹강의 제공 서비스</li></ul><ul id="a5b2fbd1-db78-4108-98d4-6cc8b65ce254" class="bulleted-list"><li style="list-style-type:disc"><strong>마통 </strong>| 위치 기반 가맹점 포인트 충전/사용 서비스</li></ul><ul id="c55938d1-00f3-45b8-a1e9-2795a0df8b51" class="bulleted-list"><li style="list-style-type:disc"><strong>포잉페이 </strong>| NFC 태그를 통한 가맹점 포인트 충전/사용 서비스</li></ul><ul id="338adadb-9f95-45dd-8450-ed99d3295eb4" class="bulleted-list"><li style="list-style-type:disc"><strong>만나컴퍼니 </strong>| 실시간 프로필 매칭을 통한 소개팅 어플</li></ul><ul id="858b47b1-6a18-49c2-b703-20d5930d9454" class="bulleted-list"><li style="list-style-type:disc"><strong>키즈락 </strong>| 자녀 휴대폰 관리 어플 (특정 시간 및 요일에 어플 차단, 문자/전화내역 관리)</li></ul><ul id="c5397ebe-f15b-4bc2-ad09-ff477ee01c1d" class="bulleted-list"><li style="list-style-type:disc"><strong>잉글리쉬 팝팝 </strong>| 잠금화면 영어단어장 어플</li></ul><ul id="ce502e32-dfd0-4220-9e1a-8ffa5f7dadff" class="bulleted-list"><li style="list-style-type:disc"><strong>썸앤쌈 </strong>| 커플 다이어리 어플</li></ul><ul id="0dadff4c-d0f9-4b58-b1fc-d64d8fcf7a4d" class="bulleted-list"><li style="list-style-type:disc"><strong>컷더콜 </strong>| 특정 번호 차단 서비스</li></ul><ul id="e5670674-c511-4a14-8e20-3184e3a4b28c" class="bulleted-list"><li style="list-style-type:disc"><strong>뷰티라인업 </strong>| 미용실 예약 관리 서비스</li></ul><p id="fdad8a12-45cf-42d6-aab3-4ba9f85f8765" class="">
+</p><p id="f554a075-34ec-4ec5-8ab9-c7f47b2de03d" class="">
+</p><p id="0ed5cc04-594f-4333-a77d-d67a365bb50d" class="">
+</p><p id="c4b1d6ae-67cd-45f6-800a-5a1502938433" class="">
+</p><p id="33f3fcb2-b37c-421e-8bbb-490a6daebae5" class="">
+</p></div></article></body></html>
